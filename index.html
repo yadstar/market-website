@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Halabja Market</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="announcement">
+      Free local delivery on orders over $35 <span>•</span> Freshly picked,
+      thoughtfully delivered
+    </div>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Halabja Market home"
+        ><span class="brand-mark">✦</span> Halabja<span>.</span></a
+      >
+      <button
+        class="menu-button"
+        id="menuButton"
+        aria-label="Open navigation menu"
+        aria-controls="mainNavigation"
+        aria-expanded="false"
+      >
+        <span></span><span></span>
+      </button>
+      <nav
+        class="nav-links"
+        id="mainNavigation"
+        aria-label="Primary navigation"
+      >
+        <a href="#shop">Shop</a><a href="#categories">Categories</a
+        ><a href="#about">Our story</a>
+      </nav>
+      <div class="header-actions">
+        <button class="login-button" id="loginButton">Log in</button
+        ><button class="cart-button" id="cartButton">
+          Bag <span id="cartCount">0</span>
+        </button>
+      </div>
+    </header>
+    <main id="home">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">GROWN WITH CARE, SHARED WITH JOY</p>
+          <h1>The good stuff,<br /><em>gathered close.</em></h1>
+          <p class="hero-text">
+            Your neighborhood market for vibrant produce, everyday pantry
+            favorites, and little things that make home feel good.
+          </p>
+          <a class="primary-button" href="#shop"
+            >Shop the market <span>→</span></a
+          >
+          <div class="hero-note">
+            <span>✦</span> New seasonal picks every Thursday
+          </div>
+        </div>
+        <div class="hero-image-wrap">
+          <div class="sun-shape"></div>
+          <img
+            class="hero-image"
+            src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1100&q=85"
+            alt="Fresh vegetables at a market"
+          />
+          <div class="floating-card">
+            <span>Picked today</span><strong>Peak-season produce</strong
+            ><i>↗</i>
+          </div>
+        </div>
+      </section>
+      <section class="category-section" id="categories">
+        <div class="section-heading">
+          <p class="eyebrow">SHOP BY AISLE</p>
+          <h2>A little something<br />for every table.</h2>
+        </div>
+        <div class="categories" id="categoryGrid"></div>
+      </section>
+      <section class="products-section" id="shop">
+        <div class="product-topline">
+          <div>
+            <p class="eyebrow">THIS WEEK'S FAVORITES</p>
+            <h2>In season, in stock.</h2>
+          </div>
+          <button class="text-button" id="viewAllButton">
+            View all goods →
+          </button>
+        </div>
+        <div class="catalog-controls">
+          <label class="search-field" for="productSearch">
+            <span>⌕</span>
+            <input
+              id="productSearch"
+              type="search"
+              placeholder="Search products"
+              autocomplete="off"
+            />
+          </label>
+          <select
+            id="sortProducts"
+            class="sort-select"
+            aria-label="Sort products"
+          >
+            <option value="featured">Sort: Featured</option>
+            <option value="price-low">Price: Low to high</option>
+            <option value="price-high">Price: High to low</option>
+          </select>
+          <button
+            class="sale-filter"
+            id="saleFilter"
+            type="button"
+            aria-pressed="false"
+          >
+            On sale
+          </button>
+        </div>
+        <div class="filters" id="filters" aria-label="Product categories"></div>
+        <p class="results-summary" id="resultsSummary" aria-live="polite"></p>
+        <div class="product-grid" id="productGrid"></div>
+      </section>
+      <section class="story-section" id="about">
+        <div class="story-photo">
+          <img
+            src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=900&q=85"
+            alt="Farmer holding lettuce"
+          />
+        </div>
+        <div class="story-copy">
+          <p class="eyebrow">OUR LITTLE CORNER OF THE WORLD</p>
+          <h2>More than a market.</h2>
+          <p>
+            We started Halabja with a simple belief: food tastes better when you
+            know where it comes from. We work directly with farmers and small
+            makers to bring you honest goods with a story.
+          </p>
+          <a href="#about" class="story-link">Get to know us <span>→</span></a>
+          <div class="values">
+            <div>
+              <strong>38</strong><span>local growers<br />&amp; makers</span>
+            </div>
+            <div>
+              <strong>100%</strong><span>thoughtfully<br />sourced</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <a class="brand" href="#home" aria-label="Halabja Market home"
+        ><span class="brand-mark">✦</span> Halabja<span>.</span></a
+      >
+      <p>Good food. Good people. Good days.</p>
+      <span>© 2026 Halabja Market</span>
+    </footer>
+    <aside class="cart-panel" id="cartPanel">
+      <div class="panel-header">
+        <h2>Your bag <span id="panelCount">0</span></h2>
+        <button class="close-button" id="closeCart">×</button>
+      </div>
+      <div id="cartItems" class="cart-items">
+        <p class="empty-cart">Your bag is waiting for something good.</p>
+      </div>
+      <div class="cart-footer">
+        <div><span>Subtotal</span><strong id="subtotal">$0.00</strong></div>
+        <div><span>Delivery</span><strong id="delivery">$0.00</strong></div>
+        <div class="cart-total">
+          <span>Total</span><strong id="total">$0.00</strong>
+        </div>
+        <button class="continue-shopping" id="continueShopping" type="button">
+          ← Continue shopping
+        </button>
+        <button class="checkout-button">Checkout <span>→</span></button>
+      </div>
+    </aside>
+    <div class="overlay" id="overlay"></div>
+    <div class="modal" id="loginModal">
+      <button class="modal-close" id="closeLogin">×</button>
+      <p class="eyebrow">WELCOME BACK</p>
+      <h2>Good to see you.</h2>
+      <p>Log in to see your saved market list and faster checkout.</p>
+      <form id="loginForm">
+        <label
+          >Email address<input
+            type="email"
+            placeholder="you@example.com"
+            required /></label
+        ><label
+          >Password<input
+            type="password"
+            placeholder="••••••••"
+            required /></label
+        ><button class="primary-button" type="submit">
+          Log in <span>→</span>
+        </button>
+      </form>
+      <small>New around here? <a href="#shop">Start shopping</a></small>
+    </div>
+    <div class="toast" id="toast"></div>
+    <script src="index.js"></script>
+  </body>
+</html>
